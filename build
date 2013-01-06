@@ -1,0 +1,7 @@
+#!/bin/bash
+git tag -f lastsync
+git pull
+for fn in `git diff --name-only lastsync..`; do
+	rst2html $fn ../html/${fn%.*}.html
+done
+
