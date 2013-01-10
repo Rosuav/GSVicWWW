@@ -22,7 +22,7 @@ void req(Protocols.HTTP.Server.Request r)
 int main()
 {
 	signal(1,sighup); sighup();
-	mainsock=Protocols.HTTP.Server.Port(req,8181,"::");
+	mainsock=Protocols.HTTP.Server.Port(req,8181);
 	kill(getpid(),signum("SIGSTOP"));
 	werror("Ready and listening. %s",ctime(time()));
 	return -1;
