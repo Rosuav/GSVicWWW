@@ -3,8 +3,8 @@ $ cp build /home/gideon/build_gasvicwww.pike
 $ sudo -u gilberta pike buildbot
 Set WebHook URL to http://gideon.rosuav.com:8181/build
 
-chdir /home/gilberta/rst
-exec start-stop-daemon --start --chuid gilberta --exec /usr/local/bin/pike buildbot
+exec start-stop-daemon --start --pidfile /asdf --chdir /home/gilberta/rst --chuid gilberta --exec /usr/local/bin/pike -- buildbot >>/home/gilberta/buildbot.log 2>&1
+expect stop
 */
 function rebuild;
 object mainsock;
@@ -23,6 +23,7 @@ int main()
 {
 	signal(1,sighup); sighup();
 	mainsock=Protocols.HTTP.Server.Port(req,8181,"::");
+	kill(getpid(),signum("SIGSTOP"));
 	werror("Ready and listening. %s",ctime(time()));
 	return -1;
 }
