@@ -16,5 +16,13 @@ Upcoming shows
 Archive
 -------
 
-* By decade: `2011-2020 <shows/2011-2020.html>`__
-* By show: `Pirates of Penzance <shows/pirates.html>`__
+By decade
+~~~~~~~~~
+
+Not yet implemented.
+
+By show
+~~~~~~~
+
+* `Pirates of Penzance <shows/pirates.html>`__
+* `Princess Ida <shows/princessida.html>`__
