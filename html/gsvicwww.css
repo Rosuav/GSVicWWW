@@ -1,0 +1,15 @@
+/*
+:Author: Chris Angelico
+:Contact: webmaster@gilbertandsullivan.org.au
+:Copyright: This stylesheet has been placed in the public domain, except as noted.
+
+Stylesheet for use with Docutils; used on www.gilbertandsullivan.org.au
+
+Some content in this file has been taken from http://www.templatemo.com/preview/templatemo_347_dark_pro
+and is made available under the terms of http://creativecommons.org/licenses/by/3.0/us/
+*/
+
+@import url(html4css1.css);
+@import url(css/ddsmoothmenu.css);
+@import url(css/templatemo_style.css);
+@import url(css/style1.css);

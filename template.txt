@@ -1,0 +1,133 @@
+<!-- head_prefix -->
+%(head_prefix)s
+<!-- /head_prefix head -->
+%(head)s
+<!-- /head stylesheet -->
+%(stylesheet)s
+<!-- /stylesheet -->
+<script language="javascript" type="text/javascript">
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js">
+
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.easing.js"></script>
+<script language="javascript" type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+ $(document).ready( function(){	
+		var buttons = { previous:$('#lofslidecontent45 .lof-previous') ,
+						next:$('#lofslidecontent45 .lof-next') };
+						
+		$obj = $('#lofslidecontent45').lofJSidernews( { interval : 4000,
+												direction		: 'opacitys',	
+											 	easing			: 'easeInOutExpo',
+												duration		: 1200,
+												auto		 	: false,
+												maxItemDisplay  : 4,
+												navPosition     : 'horizontal', // horizontal
+												navigatorHeight : 32,
+												navigatorWidth  : 80,
+												mainWidth:940,
+												buttons			: buttons} );	
+	});
+</script>
+<!-- body_prefix -->
+%(body_prefix)s
+<!-- /body_prefix -->
+<div id="templatemo_wrapper">
+	
+    <div id="templatemo_header">
+    	<div id="site_title"> <h1><a href="http://www.gilbertandsullivan.org.au">Gilbert and Sullivan Opera Victoria</a></h1></div>
+        
+        <div class="cleaner"></div>
+    </div> <!-- END of header -->
+    <div id="templatemo_menu" class="ddsmoothmenu">
+        <ul>
+            <li><a href="http://www.gilbertandsullivan.org.au/index.php?option=com_content&view=frontpage&Itemid=498" class="selected">HOME<span>Latest News</span></a></li>
+            <li><a href="http://www.gilbertandsullivan.org.au/index.php?option=com_content&view=frontpage&Itemid=462">COMING EVENTS<span></span></a>
+                <ul>
+                    <li><a href="http://www.gilbertandsullivan.org.au/index.php?option=com_content&view=article&id=648&Itemid=507">The Pirates of Penzance</a></li>
+                    <li><a href="http://www.gilbertandsullivan.org.au/index.php?option=com_content&view=article&id=649&Itemid=531">The Geisha</a></li>
+                </ul>
+            </li>
+			<li><a href="http://www.gilbertandsullivan.org.au/index.php?option=com_content&view=article&id=647&Itemid=529">SEASON 2013<span></span></a>
+                <ul>
+                    <li><a href="http://www.gilbertandsullivan.org.au/index.php?option=com_content&view=article&id=648&Itemid=507">The Pirates of Penzance</a></li>
+                    <li><a href="http://www.gilbertandsullivan.org.au/index.php?option=com_content&view=article&id=649&Itemid=531">The Geisha</a></li>
+                    <li><a href="http://www.gilbertandsullivan.org.au/index.php?option=com_content&view=article&id=650&Itemid=532">Princess Ida</a></li>
+					<li><a href="http://www.gilbertandsullivan.org.au/index.php?option=com_content&view=article&id=647&Itemid=523">Subscribe</a></li>
+                </ul>
+            </li>
+			<li><a href="about.html">AUDITIONS AND SCHOLARSHIPS<span></span></a>
+                <ul>
+                    <li><a href="http://www.gilbertandsullivan.org.au/index.php?option=com_content&view=category&layout=blog&id=13&Itemid=520">Auditions for The Geisha</a></li>
+                    <li><a href="http://www.gilbertandsullivan.org.au/index.php?option=com_content&view=article&id=53&Itemid=486">Bruce Doery Scholarship</a></li>
+                </ul>
+            </li>
+			<li><a href="about.html">Society<span>78 Years Young</span></a>
+                <ul>
+                    <li><a href="http://www.templatemo.com/page/1">Committee</a></li>
+                    <li><a href="http://www.templatemo.com/page/2">Concert Party</a></li>
+                    <li><a href="http://www.templatemo.com/page/3">Library</a></li>
+                    <li><a href="http://www.templatemo.com/page/4">Members</a></li>
+                    <li><a href="http://www.templatemo.com/page/5">TanTanTara!</a></li>
+                    <li><a href="http://www.templatemo.com/page/4">FAQs</a></li>
+                    <li><a href="http://www.templatemo.com/page/5">Join Us</a></li>
+                    <li><a href="http://www.templatemo.com/page/4">About The Society</a></li>
+               </ul>
+			
+            </li>
+            <li><a href="portfolio.html">Archive<span>Past Shows</span></a>
+                <ul>
+                    <li><a href="http://www.templatemo.com/page/1">Archive Welcome</a></li>
+                    <li><a href="http://www.templatemo.com/page/2">By Show</a></li>
+                    <li><a href="http://www.templatemo.com/page/3">By Year</a></li>
+                    <li><a href="http://www.templatemo.com/page/4">Playbills</a></li>
+                    <li><a href="http://www.templatemo.com/page/5">What's New</a></li>
+               </ul>
+			</li>
+			
+			<li><a href="blog.html">Shop</a></li>
+			<li><a href="blog.html">Documents</a></li>
+			<li><a href="blog.html">Links</a></li>			
+			<li><a href="blog.html">Blog<span>Our latest news</span></a></li>
+			<li><a href="contact.html">Contact<span>Get to us</span></a></li>
+        </ul>
+        <br style="clear: left" />
+    </div> <!-- END of menu -->
+<br style="clear: both" />
+<!-- body_pre_docinfo -->
+%(body_pre_docinfo)s
+<!-- /body_pre_docinfo docinfo -->
+%(docinfo)s
+<!-- /docinfo body -->
+%(body)s
+<!-- /body -->
+</div> <!-- END of wrapper -->
+<!-- body_suffix -->
+%(body_suffix)s
+<!-- /body_suffix -->

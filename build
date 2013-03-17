@@ -16,6 +16,7 @@ int main()
 	Process.create_process(({"git","pull"}))->wait();
 	#endif
 	array(string) names=Process.run(({"git","diff","--name-only","-z",start+".."}))->stdout/"\0"-({""});
+	array(string) rst2html=({"rst2html","--stylesheet-path=../html/gsvicwww.css","--link-stylesheet","--template=template.txt"}); //Standard args to rst2html
 	foreach (names,string fn) if (has_suffix(fn,".rst"))
 	{
 		if (sscanf(fn,"index/%s",string part) && has_index[part]) {need_index[part]=1; continue;} //Do index files at the end.
@@ -26,7 +27,7 @@ int main()
 		string html=combine_path(@path);
 		if (!file_stat(fn) && file_stat(html)) {rm(html); continue;}
 		Stdio.mkdirhier(combine_path(@path[..<1]));
-		Process.create_process(({"rst2html",fn,html}))->wait(); //Poss TODO: Use --template=some_file
+		Process.create_process(rst2html+({fn,html}))->wait(); //Poss TODO: Use --template=some_file
 	}
 	array(string) allfiles=sizeof(need_index) && Process.run(({"find","../html/shows","-type","f","-print0"}))->stdout/"\0"-({""}); //Enumerate all files in all subdirectories... using an external command. This may want redoing, but hey, it's short.
 	foreach (indices(need_index),string part)
@@ -35,7 +36,7 @@ int main()
 		string fn="index/"+part+".rst",html="../html/shows/"+part+".html";
 		if (!file_stat(fn) && file_stat(html)) {rm(html); continue;}
 		string content=sprintf("%{* `%s <%s>`__\n%}",map(filter(allfiles,has_value,part)-({html}),splitfn));
-		mapping info=Process.run(({"rst2html"}),(["stdin":sprintf(Stdio.read_file(fn),content)]));
+		mapping info=Process.run(rst2html,(["stdin":sprintf(Stdio.read_file(fn),content)]));
 		if (info->stderr!="") werror(info->stderr);
 		if (info->stdout!="") Stdio.File(html,"wct")->write(info->stdout); //If failure, leave previous content
 	}

@@ -1,3 +1,6 @@
 20130107: Proof-of-concept only. Nothing of interest.
 
 # apt-get install python-docutils
+
+20130318: A bit of a merge of this and AMcG's proposed style set.
+Note: Content in html/ is used by, and only by, the "reinit" script.
