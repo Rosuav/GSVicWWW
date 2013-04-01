@@ -27,7 +27,7 @@ int main()
 		string html=combine_path(@path);
 		if (!file_stat(fn) && file_stat(html)) {rm(html); continue;}
 		Stdio.mkdirhier(combine_path(@path[..<1]));
-		Process.create_process(rst2html+({fn,html}))->wait(); //Poss TODO: Use --template=some_file
+		Process.create_process(rst2html+({fn,html}))->wait();
 	}
 	array(string) allfiles=sizeof(need_index) && Process.run(({"find","../html/shows","-type","f","-print0"}))->stdout/"\0"-({""}); //Enumerate all files in all subdirectories... using an external command. This may want redoing, but hey, it's short.
 	foreach (indices(need_index),string part)
