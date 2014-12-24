@@ -55,8 +55,3 @@ Timing
 The Society is currently considering rebranding itself as GASVIC or some other.
 Whatever actual acronym and name are eventually accepted, this change will be
 a good opportunity to revamp the web site.
-
-Notes
-=====
-
-To build this site locally, you will need docutils (eg python-docutils).

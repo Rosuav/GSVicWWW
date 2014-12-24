@@ -1,4 +1,5 @@
 #!/usr/local/bin/pike
+//Note that this requires docutils to be installed, and assumes it already is.
 
 array(string) splitfn(string fn)
 {
